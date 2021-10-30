@@ -51,8 +51,30 @@ button {
     background-color: rgba($color: #000000, $alpha: 0.1);
     border: none;
     border-radius: 10px;
+    transition: background-color,opacity 0.3s ease-in-out;
 }
 
+button.correct {
+    background-color: rgba($color: #86cd1b, $alpha: 0.3);
+    animation: 0.3s ease-in-out;
+    animation-name: btn-correct;
+}
+@keyframes btn-correct {
+    0%   { transform: scale(1);}
+    50%  { transform: scale(1.02);}
+    100% { transform: scale(1);}
+}
+button.wrong {
+    background-color: rgba($color: #fa4659, $alpha: 0.2);
+    animation: 0.3s ease-in-out;
+    animation-name: btn-wrong;
+}
+@keyframes btn-wrong {
+    0%   { transform: translateX(0);}
+    33%  { transform: translateX(-5px);}
+    66%  { transform: translateX(5px);}
+    100% { transform: translateX(0);}
+}
 button.disabled {
     opacity: 0.2;
     cursor: default;

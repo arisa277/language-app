@@ -53,6 +53,92 @@ button {
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 10px;
+  -webkit-transition: background-color,opacity 0.3s ease-in-out;
+  transition: background-color,opacity 0.3s ease-in-out;
+}
+
+button.correct {
+  background-color: rgba(134, 205, 27, 0.3);
+  -webkit-animation: 0.3s ease-in-out;
+          animation: 0.3s ease-in-out;
+  -webkit-animation-name: btn-correct;
+          animation-name: btn-correct;
+}
+
+@-webkit-keyframes btn-correct {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes btn-correct {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+button.wrong {
+  background-color: rgba(250, 70, 89, 0.2);
+  -webkit-animation: 0.3s ease-in-out;
+          animation: 0.3s ease-in-out;
+  -webkit-animation-name: btn-wrong;
+          animation-name: btn-wrong;
+}
+
+@-webkit-keyframes btn-wrong {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  33% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  66% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes btn-wrong {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  33% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  66% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 button.disabled {
